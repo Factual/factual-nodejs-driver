@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/Factual/factual-nodejs-driver.png)](http://travis-ci.org/Factual/factual-nodejs-driver)
 # About
 
 This is the Factual-supported Node.js driver for [Factual's public API](http://developer.factual.com).
