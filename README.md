@@ -71,7 +71,7 @@ factual.get('/t/places-us', {q:"starbucks", filters:{"$or":[{"locality":{"$eq":"
 
 // Paging:
 //  search for starbucks in Los Angeles or Santa Monica (second page of results):
-factual.get('/t/places-us', {q:"starbucks", filters:{"$or":[{"locality":{"$eq":"los angeles"}},{"locality":{"$eq":"santa monica"}}]}}, offset:20, limit:20, function (error, res) {
+factual.get('/t/places-us', {q:"starbucks", filters:{"$or":[{"locality":{"$eq":"los angeles"}},{"locality":{"$eq":"santa monica"}}]}, offset:2, limit:1}, function (error, res) {
   console.log(res.data);
 });
 
