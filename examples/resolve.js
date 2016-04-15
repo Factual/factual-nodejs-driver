@@ -7,12 +7,18 @@ var factual = new Factual(auth.key, auth.secret);
 factual.startDebug();
 
 // resovle from name and address info
-factual.get('/t/places-us/resolve?values={"name":"McDonalds","address":"10451 Santa Monica Blvd","region":"CA","postcode":"90025"}', function (error, res) {
-  console.log(res.data);
+var data = JSON.stringify({
+        name: "AT&T Center",
+        address: "1150 S Olive St",
+        locality: "Los Angeles",
+        region: "CA",
+        postcode: "90015",
+        country: "us"
 });
 
-
-// resolve from name and geo location
-factual.get('/t/places-us/resolve?values={"name":"McDonalds","latitude":34.05671,"longitude":-118.42586}', function (error, res) {
-  console.log(res.data);
+factual.get('/t/places-us/resolve',
+            {values:data},
+            function (error, res) {
+                if (error) { console.log(error); }
+                else if (res) { console.log(res); }
 });
