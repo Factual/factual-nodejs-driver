@@ -55,7 +55,7 @@ factual.get('/t/places-us', {filters:{category_ids:{"$includes_any":[312,347]}}}
 });
 
 //  search entertainment venues but NOT adult entertainment
-factual.get('/t/places-us', {filters:{"$and":[{category_ids:{"$includes":317}},{category_ids:{"$excludes":318}}], function (error, res) {
+factual.get('/t/places-us', {filters:{"$and":[{category_ids:{"$includes":317}},{category_ids:{"$excludes":318}}]}}, function (error, res) {
   console.log(res.data);
 });
 
